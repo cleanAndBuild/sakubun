@@ -44,7 +44,8 @@ class ViewController: UIViewController {
 
         let strSentence:String = String(format:"%@、%@で%@と%@が%@"
             ,whenArray[whenNumber],whereArray[whereNumber],whoArray[whoNumber],whoArray2[whoNumber2],doArray[doNumber])
-
+        tvSentence.text = tvSentence
+        
         let content = AVSpeechUtterance(string: strSentence)
         content.voice = AVSpeechSynthesisVoice(language: "ja-JP")
         self.speak.speak(content)
